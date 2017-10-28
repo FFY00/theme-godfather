@@ -55,6 +55,6 @@ function fish_prompt
   end
 
   # terminate with a nice prompt char:
-  echo -n -s $arrow $normal
+  echo -n -s $arrow $normal ' '
 
 end
