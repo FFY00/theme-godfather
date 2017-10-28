@@ -2,7 +2,7 @@
 
 Clean git theme with homey feel and git-centric features.
 
-###### OUTADED PRINT
+###### OUTDATED PRINT
 ![screenshot](http://i.imgur.com/mh7a39d.png)
 
 #### Prompt structure:
