@@ -1,4 +1,4 @@
-## godfather fish theme
+## godfather2 fish theme
 
 Clean git theme with homey feel and git-centric features.
 
