@@ -26,6 +26,12 @@ function fish_prompt
   set -l blue (set_color -o blue)
   set -l green (set_color -o green)
   set -l normal (set_color normal)
+  
+  if test $last_status = 0
+      set arrow " $green▶︎︎"
+  else
+      set arrow " $red▶︎︎"
+  end
 
   set -l cwd $cyan(prompt_pwd)
 
@@ -49,6 +55,6 @@ function fish_prompt
   end
 
   # terminate with a nice prompt char:
-  echo -n -s ' » ' $normal
+  echo -n -s $arrow $normal
 
 end
