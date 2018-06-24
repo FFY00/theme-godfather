@@ -1,4 +1,4 @@
-# fish theme: goddy
+# fish theme: FFY00 and goddy
 
 function _git_branch_name
   echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
@@ -26,6 +26,7 @@ function fish_prompt
   set -l red (set_color -o red)
   set -l blue (set_color -o blue)
   set -l green (set_color -o green)
+  set -l blue_white (set_color -b blue white)
   set -l normal (set_color normal)
 
   if test $last_status = 0
@@ -52,6 +53,10 @@ function fish_prompt
       set git_info $green $git_branch " "
     end
     echo -n -s ' ' $git_info $normal
+  end
+
+  if set -q VIRTUAL_ENV
+    echo -n -s ' ' $blue_white "(" (basename "$VIRTUAL_ENV") ")" $normal
   end
 
   # terminate with a nice prompt char:
